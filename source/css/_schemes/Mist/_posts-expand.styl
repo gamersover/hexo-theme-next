@@ -3,7 +3,7 @@
 .posts-expand {
   &.index {
     .post-title, .post-meta {
-      text-align: $site-meta-text-align;
+      text-align: center;
 
       +mobile() {
         text-align: center;
@@ -17,6 +17,14 @@
 
   .post-eof {
     display: none;
+  }
+
+  .post-block {
+    margin-top: 0px;
+    margin-bottom: 60px;
+    padding: 25px;
+    -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+    -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
   }
 
   .post-block:not(:first-child) {
@@ -52,18 +60,19 @@
 
 .post-button {
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
 
   .btn {
-    // color: $grey-dim;
-    background: none;
-    border: 0;
-    border-bottom: 2px solid var(--btn-default-border-color);
-    padding: 0;
-    transition-property: border;
-
+      color: #555 !important;
+      // background-color: #EBEDF2;
+      border-radius: 3px;
+      border: 0 !important;
+      transition-property: unset;
+      padding: 0px, 15px;
     &:hover {
-      border-bottom-color: var(--btn-default-hover-border-color);
+      background: white;
+      border-bottom-color: $black-deep;
+      box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.35);
     }
   }
 }
